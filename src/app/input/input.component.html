@@ -1,0 +1,7 @@
+<div class="inp" [ngClass]="{'hidden': visible == false }">
+    <div class="close" (click)="close()">X</div>
+    <textarea placeholder="enter new task" (keyup.enter)="sendTask(text)" [(ngModel)]="text"></textarea>
+    <div class="enter" (click)="sendTask(text)">
+        <div class="txt">ENTER</div>
+    </div>
+</div>

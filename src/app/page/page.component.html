@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <div class="month">{{months[curMonth]}} | {{year}}</div>
+  <div class="d_of_w">
+    <div class="day">M</div>
+    <div class="day">T</div>
+    <div class="day">W</div>
+    <div class="day">T</div>
+    <div class="day">F</div>
+    <div class="day">S</div>
+    <div class="day">S</div>
+  </div>
+  <div class="container">
+    <div class="days" *ngFor="let day of days">
+      <div class="day" (click)="open($event)" 
+        [ngClass]="{'today' :year == yearForToday
+        && curMonth == monthForToday 
+        && day == curDate}">{{day}}
+    </div>
+    </div>
+  </div>
+  <nav class="prew btn" (click)="prew()">
+    <div class="btn_txt">&#60;</div>
+  </nav>
+  <nav class="next btn" (click)="next()">
+    <div class="btn_txt">&#62;</div>
+  </nav>
+</div>

@@ -1,0 +1,10 @@
+<div class="tasks">
+  <div class="header" (click)="writeEdited()">Tasks</div>
+  <div class="task" *ngFor="let task of taskArray">
+    <span>
+      <span class="sm_date"> &#8756; {{' ' + task.date + ' '}}</span>
+      <span (click)="editTask(task)">{{task.val}}</span>
+    </span>
+    <div class="delete" (click)="removeTask(task)">x</div>
+  </div>
+</div>
